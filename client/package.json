@@ -1,0 +1,62 @@
+{
+	"name": "ruby-syntax-lsp",
+	"displayName": "ruby-syntax-lsp",
+	"description": "",
+	"version": "0.0.1",
+	"license": "MIT",
+	"engines": {
+		"vscode": "^1.66.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:ruby"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "ruby-syntax-lsp.restartServer",
+				"title": "Ruby Syntax LSP: Restart Language Server"
+			}
+		],
+		"configuration": {
+			"order": 0,
+			"title": "Ruby Syntax LSP",
+			"properties": {
+				"ruby-syntax-lsp.lspPath": {
+					"type": "string",
+					"markdownDescription": "Path to the `ruby_syntax_lsp` executable. By default, the extension will try to find it in the system path.",
+					"scope": "machine",
+					"default": ""
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "yarn run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"lint": "eslint src --ext ts"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.4",
+		"@types/mocha": "^9.0.0",
+		"@types/node": "14.x",
+		"@types/vscode": "^1.66.0",
+		"@typescript-eslint/eslint-plugin": "^4.31.1",
+		"@typescript-eslint/parser": "^4.31.1",
+		"@vscode/test-electron": "^1.6.2",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.5.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"glob": "^7.1.7",
+		"mocha": "^9.1.1",
+		"prettier": "^2.6.2",
+		"typescript": "^4.4.3"
+	},
+	"dependencies": {
+		"vscode-languageclient": "^7.0.0"
+	}
+}

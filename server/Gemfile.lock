@@ -1,0 +1,19 @@
+PATH
+  remote: .
+  specs:
+    ruby_syntax_lsp (0.0.1)
+      language_server-protocol (~> 3.16)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    language_server-protocol (3.16.0.3)
+
+PLATFORMS
+  x86-mingw32
+
+DEPENDENCIES
+  ruby_syntax_lsp!
+
+BUNDLED WITH
+   2.3.6
