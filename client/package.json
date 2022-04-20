@@ -1,14 +1,14 @@
 {
 	"name": "ruby-syntax-lsp",
 	"displayName": "ruby-syntax-lsp",
-	"description": "",
+	"description": "This extension provides LSP of Ruby syntax.",
 	"version": "0.0.1",
 	"license": "MIT",
 	"engines": {
 		"vscode": "^1.66.0"
 	},
 	"categories": [
-		"Other"
+		"Programming Languages"
 	],
 	"activationEvents": [
 		"onLanguage:ruby"
