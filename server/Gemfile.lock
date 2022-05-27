@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    ruby_syntax_lsp (0.0.1)
+    ruby_syntax_lsp (0.0.2)
       language_server-protocol (~> 3.16)
 
 GEM

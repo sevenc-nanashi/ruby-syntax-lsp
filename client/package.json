@@ -2,7 +2,7 @@
 	"name": "ruby-syntax-lsp",
 	"displayName": "ruby-syntax-lsp",
 	"description": "This extension provides LSP of Ruby syntax.",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"publisher": "sevenc-nanashi",
 	"license": "MIT",
 	"engines": {
@@ -33,6 +33,12 @@
 				"ruby-syntax-lsp.lspPath": {
 					"type": "string",
 					"markdownDescription": "Path to the `ruby_syntax_lsp` executable. By default, the extension will try to find it in the system path.",
+					"scope": "machine",
+					"default": ""
+				},
+				"ruby-syntax-lsp.lspArgs": {
+					"type": "string",
+					"markdownDescription": "Additional arguments to pass to the `ruby_syntax_lsp` executable.",
 					"scope": "machine",
 					"default": ""
 				}

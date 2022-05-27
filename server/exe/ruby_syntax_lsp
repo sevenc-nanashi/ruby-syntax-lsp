@@ -2,8 +2,4 @@
 
 require "ruby_syntax_lsp"
 
-writer = LSP::Transport::Stdio::Writer.new
-reader = LSP::Transport::Stdio::Reader.new
-server = Server.new(writer, reader)
-
-server.start
+RubySyntaxLsp.cli

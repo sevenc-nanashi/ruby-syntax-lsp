@@ -14,8 +14,21 @@ export function activate(context: ExtensionContext) {
     const serverPath: string =
       workspace.getConfiguration("ruby-syntax-lsp").get("lspPath") ||
       "ruby_syntax_lsp"
-    console.log("Ruby Syntax LSP server path:", serverPath)
-    return spawn(serverPath, [], { cwd: context.extensionPath })
+    const serverArgs: string =
+      workspace.getConfiguration("ruby-syntax-lsp").get("lspArgs") || ""
+    const processCommand = serverPath + " " + serverArgs
+    console.log("Starting server: " + processCommand)
+    if (process.platform === "win32") {
+      return spawn(
+        process.env.SYSTEMROOT + "\\System32\\cmd.exe",
+        ["/c", processCommand],
+        { cwd: context.extensionPath }
+      )
+    } else {
+      return spawn("/bin/sh", ["-c", processCommand], {
+        cwd: context.extensionPath,
+      })
+    }
   }
 
   const clientOptions: LanguageClientOptions = {

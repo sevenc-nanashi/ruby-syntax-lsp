@@ -1,8 +1,10 @@
 # frozen_string_literal: true
 
+require_relative "lib/ruby_syntax_lsp"
+
 Gem::Specification.new do |spec|
   spec.name = "ruby_syntax_lsp"
-  spec.version = "0.0.1"
+  spec.version = RubySyntaxLsp::VERSION
   spec.authors = ["sevenc-nanashi"]
   spec.email = ["sevenc7c@sevenc7c.com"]
 
